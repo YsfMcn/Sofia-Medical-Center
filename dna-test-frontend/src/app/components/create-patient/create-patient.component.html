@@ -1,0 +1,56 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center"> {{pageTitle}} </h3>
+    <form (ngSubmit) = "onRunTest()">
+    
+        <div class="form-group">
+            <label> Patient Name </label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] = "patient.name" name = "name">
+        </div>
+    
+        <div class="form-group">
+            <label> Phone </label>
+            <input type="text" class ="form-control" id = "phone"
+                [(ngModel)] = "patient.phone" name = "phone">
+        </div>
+    
+        <div class="form-group">
+            <label> Patient Symptoms </label>
+            <input type="text" class ="form-control" id = "patientSymptoms"
+                [(ngModel)] = "patient.patientSymptoms" name = "patientSymptoms">
+        </div>
+
+        <div class="form-group">
+            <label> Email </label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "patient.email" name = "email">
+        </div>
+
+        <div class="form-group">
+            <label> Age </label>
+            <input type="text" class ="form-control" id = "age"
+                [(ngModel)] = "patient.age" name = "age">
+        </div>
+
+        <div class="form-group">
+            <label> DNA </label>
+            <input type="text" class ="form-control" id = "dna"
+                [(ngModel)] = "patient.dna" name = "dna">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Run Test</button>
+    
+        <div class="form-group">
+            <label> Test Result </label>
+            <input type="text" class ="form-control" id = "testResult"
+                [(ngModel)] = "patient.testResult" name = "testResult" disabled>
+        </div>
+
+        <div class="form-group">
+            <label> Date </label>
+            <input type="text" class ="form-control" id = "date"
+                [(ngModel)] = "patient.date" name = "date" disabled>
+        </div>
+
+    </form>
+    </div> 

@@ -1,0 +1,32 @@
+<h1 class="text-center"> {{pageTitle}} </h1>
+<div class='row'>
+    <div class='col-md-4'>
+        <input type="text" 
+        [(ngModel)]="filters.keyword" 
+        name="keyword"
+        (input)="listPatients()" placeholder="Filter by"> 
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Name</th>
+            <th> Phone </th>
+            <th> Test Result</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let patient of patients">
+            <td> {{ patient.name }} </td>
+            <td> {{ patient.phone }} </td>
+            <td> {{ patient.testResult }} </td>
+            <td>
+                <button (click)="patientDetails(patient.id)" class="btn btn-info" style="margin-left: 10px"> See More
+                </button>
+                <button (click)="reduTest(patient.id)" class="btn btn-info" style="margin-left: 10px"> Redu Test
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
