@@ -26,7 +26,7 @@
 	POST /dnatest/v1/patients
 	GET /dnatest/v1/patients/{patientId} 
 	
-## Install node modules for angular application (expense-tracker-frontend)
+## Install node modules for angular application
 
 	npm install
 	
